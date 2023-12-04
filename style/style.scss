@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$fontMontserrat: 'Montserrat', sans-serif;
+$sombraTXT: 7px 7px 7px #000;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: $fontMontserrat;
+}
+
+.star-bc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: #15151b;
+    background-color: #15151b;
+    z-index: -1;
+
+    .star {
+        position: absolute;
+        background-color: #fff;
+        border-radius: 50%;
+        animation: twinkle 2s infinite alternate;
+
+        @keyframes twinkle {
+            0% {
+                opacity: 0.1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.barra-nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    width: 100%;
+    padding: 20px;
+    z-index: 1;
+
+
+
+    h2 {
+        color: #fff;
+        margin-left: 50px;
+        font-weight: lighter;
+    }
+
+    ul {
+        list-style: none;
+        margin-right: 50px;
+
+        li {
+            display: inline-block;
+            padding-right: 20px;
+
+            a {
+                position: relative;
+                text-decoration: none;
+                padding: 10px;
+                color: #fff;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: #fff;
+                    transition: width 0.4s ease;
+                }
+
+
+
+                &:hover::before {
+                    width: 100%;
+                }
+            }
+
+            .activo::before {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.barra-nav.scrolled {
+    transition: all .3s cubic-bezier(0.74, -0.98, 0.58, 1) 0s!important;
+}
+
+.scrolled {
+    -webkit-backdrop-filter: blur(15px)!important;
+    backdrop-filter: blur(15px)!important;
+    background-color: #1b1a2ea9!important;
+    box-shadow: 0 10px 10px 0 rgba(9,5,29,.171)!important;
+}
+
+.inicio {
+
+    .titulo-img {
+        display: flex;
+        justify-content: space-between;
+        padding: 60px;
+
+        .titulo-bienvenida {
+            width: 50%;
+            padding: 120px;
+            text-shadow: $sombraTXT;
+
+            h2 {
+                font-size: 40px;
+                color: #fff;
+                margin-bottom: 30px;
+
+                .nombre {
+                    font-size: 50px;
+                    color: #cd5ff8;
+                }
+            }
+
+            span {
+                color: #cd5ff8;
+                font-size: 45px;
+                font-weight: bolder;
+
+                i {
+                    font-style: normal;
+                }
+            }
+        }
+
+        .img-bienvenida {
+            width: 50%;
+
+            img {
+                margin-left: 230px;
+            }
+        }
+    }
+}
+
+.sobre-mi {
+    .titulo-sobre-mi {
+        color: #fff;
+        text-align: center;
+        font-size: 38px;
+        margin-top: 40px;
+        text-shadow: $sombraTXT;
+    }
+
+    .cards-info {
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-around;
+        padding: 100px;
+        .card-sobre-mi {
+            border: 1px solid cyan;
+            width: 40%;
+            padding: 50px ;
+        }
+
+        .card-skills {
+            width: 40%;
+        }
+    }
+}
