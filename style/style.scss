@@ -6,7 +6,7 @@ $sombraTXT: 7px 7px 7px #000;
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: linear-gradient(180deg,hsla(0,0%,100%,.15),hsla(0,0%,100%,0));
 }
 
 html {
@@ -25,8 +25,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: #15151b;
-    background-color: #15151b;
+    background: linear-gradient(to bottom, #0c0c0e, #250c4c);
+    //background-color: #15151b;
     z-index: -1;
 
     .star {
@@ -56,8 +56,6 @@ body {
     width: 100%;
     padding: 20px;
     z-index: 1;
-
-
 
     h2 {
         color: #fff;
@@ -119,16 +117,16 @@ body {
 
     .titulo-img {
         display: flex;
-        justify-content: space-between;
-        padding: 60px;
+        justify-content: space-around;
+        padding-top: 150px;
 
         .titulo-bienvenida {
-            width: 50%;
-            padding: 120px;
+            width: 60%;
+            padding: 130px;
             text-shadow: $sombraTXT;
 
             h2 {
-                font-size: 40px;
+                font-size: 55px;
                 color: #fff;
                 margin-bottom: 30px;
 
@@ -140,7 +138,7 @@ body {
 
             span {
                 color: #cd5ff8;
-                font-size: 45px;
+                font-size: 55px;
                 font-weight: bolder;
 
                 i {
@@ -150,37 +148,69 @@ body {
         }
 
         .img-bienvenida {
-            width: 50%;
+            width: 40%;
 
             img {
-                margin-left: 230px;
+                width: 450px;
+                height: auto;
             }
         }
     }
 }
 
-.sobre-mi {
+.sobre-mi-sect {
+    padding-top: 235px;
+
     .titulo-sobre-mi {
-        color: #fff;
-        text-align: center;
+        color: #cd5ff8;
+        text-align: left;
+        margin-left: 160px;
         font-size: 38px;
         margin-top: 40px;
         text-shadow: $sombraTXT;
     }
 
-    .cards-info {
-        margin-top: 80px;
-        display: flex;
-        justify-content: space-around;
-        padding: 100px;
-        .card-sobre-mi {
-            border: 1px solid cyan;
-            width: 40%;
-            padding: 50px ;
+    .info {
+        padding-bottom: 300px;
+        .informacion-mia {
+            display: flex;
+            justify-content: space-around;
+
+            .sobre-mi {
+                width: 50%;
+
+                p {
+                    padding-top: 20px;
+                    color: #fff;
+                    font-size: 25px;
+                    text-align: justify;
+                }
+
+                ul {
+                    margin-top: 30px;
+                    list-style: none;
+
+                    li {
+                        margin-top: 30px;
+                        color: #fff;
+                        font-size: 25px;
+
+                        span {
+                            font-weight: bolder;
+                        }
+                    }
+                }
+
+            }
+
+            img {
+                height: 300px;
+                width: 300px;
+                border-radius: 50%;
+                overflow: hidden;
+                border: 4px solid #fff;
+            }
         }
 
-        .card-skills {
-            width: 40%;
-        }
     }
 }
