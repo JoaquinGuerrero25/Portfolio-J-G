@@ -130,9 +130,39 @@ body {
   width: 450px;
   height: auto;
 }
+.inicio .scroll-abajo {
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inicio .scroll-abajo a {
+  text-decoration: none;
+}
+.inicio .scroll-abajo .border-boton {
+  border: 1px solid #fff;
+  width: 30px;
+  height: 60px;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4039215686);
+  transition: transform 0.3s ease;
+}
+.inicio .scroll-abajo .border-boton i {
+  margin: 0 auto;
+  color: #fff;
+  font-size: 25px;
+}
+.inicio .scroll-abajo .border-boton:hover {
+  transform: scale(1.1);
+}
 
 .sobre-mi-sect {
-  padding-top: 235px;
+  padding-top: 185px;
 }
 .sobre-mi-sect .titulo-sobre-mi {
   color: #cd5ff8;
@@ -143,7 +173,7 @@ body {
   text-shadow: 7px 7px 7px #000;
 }
 .sobre-mi-sect .info {
-  padding-bottom: 300px;
+  padding-bottom: 80px;
 }
 .sobre-mi-sect .info .informacion-mia {
   display: flex;
@@ -170,10 +200,121 @@ body {
 .sobre-mi-sect .info .informacion-mia .sobre-mi ul li span {
   font-weight: bolder;
 }
+.sobre-mi-sect .info .informacion-mia .sobre-mi .boton-descargar button {
+  font-size: 16px;
+  color: #fff;
+  margin-top: 30px;
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  border: 0.1px solid #fff;
+  box-shadow: 7px 7px 7px #000;
+  background-color: #cd5ff8;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-weight: bolder;
+}
+.sobre-mi-sect .info .informacion-mia .sobre-mi .boton-descargar button:hover {
+  transform: scale(1.1);
+}
 .sobre-mi-sect .info .informacion-mia img {
-  height: 300px;
-  width: 300px;
+  height: 320px;
+  width: 320px;
   border-radius: 50%;
   overflow: hidden;
-  border: 4px solid #fff;
+  border: 6px solid #fff;
+}
+.sobre-mi-sect .info .skills {
+  margin-left: 160px;
+  margin-top: 100px;
+}
+.sobre-mi-sect .info .skills h2 {
+  color: #cd5ff8;
+  text-shadow: 7px 7px 7px #000;
+  font-size: 30px;
+}
+.sobre-mi-sect .info .skills .imagenes-skills {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  width: 70%;
+}
+.sobre-mi-sect .info .skills .imagenes-skills .img-container {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+.sobre-mi-sect .info .skills .imagenes-skills .img-container img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s, filter 0.3s;
+  filter: grayscale(100%);
+}
+.sobre-mi-sect .info .skills .imagenes-skills .img-container h4 {
+  color: #000;
+  background-color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  position: absolute;
+  border-radius: 6px;
+  top: 5%;
+  left: 20%;
+}
+.sobre-mi-sect .info .skills .imagenes-skills .img-container:hover img {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+.sobre-mi-sect .info .skills .imagenes-skills .img-container:hover h4 {
+  opacity: 1;
+}
+.sobre-mi-sect .info .skills .imagenes-skills .img-container:not(:hover) h4 {
+  opacity: 0;
+}
+
+.proyectos-sect {
+  padding: 160px;
+}
+.proyectos-sect h2 {
+  color: #cd5ff8;
+  font-size: 38px;
+  text-shadow: 7px 7px 7px #000;
+  padding-bottom: 100px;
+}
+.proyectos-sect #carouselExampleControls {
+  width: 65%;
+  margin: auto;
+}
+.proyectos-sect #carouselExampleControls .carousel-inner {
+  width: 100%;
+}
+.proyectos-sect #carouselExampleControls .carousel-inner .carousel-item {
+  text-align: center;
+  position: relative;
+}
+.proyectos-sect #carouselExampleControls .carousel-inner .carousel-item img {
+  border-radius: 20px;
+}
+.proyectos-sect #carouselExampleControls .carousel-inner .carousel-item h3 {
+  display: none;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  background-color: #250c4c;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  font-weight: bolder;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2823529412);
+  box-shadow: 7px 7px 7px #000;
+}
+.proyectos-sect #carouselExampleControls .carousel-inner .carousel-item:hover {
+  display: block;
+}
+.proyectos-sect #carouselExampleControls .carousel-inner .carousel-item:hover h3 {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

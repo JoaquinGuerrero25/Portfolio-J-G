@@ -6,7 +6,7 @@ $sombraTXT: 7px 7px 7px #000;
 * {
     margin: 0;
     padding: 0;
-    box-sizing: linear-gradient(180deg,hsla(0,0%,100%,.15),hsla(0,0%,100%,0));
+    box-sizing: linear-gradient(180deg, hsla(0, 0%, 100%, .15), hsla(0, 0%, 100%, 0));
 }
 
 html {
@@ -103,14 +103,14 @@ body {
 }
 
 .barra-nav.scrolled {
-    transition: all .3s cubic-bezier(0.74, -0.98, 0.58, 1) 0s!important;
+    transition: all .3s cubic-bezier(0.74, -0.98, 0.58, 1) 0s !important;
 }
 
 .scrolled {
-    -webkit-backdrop-filter: blur(15px)!important;
-    backdrop-filter: blur(15px)!important;
-    background-color: #1b1a2ea9!important;
-    box-shadow: 0 10px 10px 0 rgba(9,5,29,.171)!important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    backdrop-filter: blur(15px) !important;
+    background-color: #1b1a2ea9 !important;
+    box-shadow: 0 10px 10px 0 rgba(9, 5, 29, .171) !important;
 }
 
 .inicio {
@@ -156,10 +156,45 @@ body {
             }
         }
     }
+
+    .scroll-abajo {
+        margin-top: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+        }
+
+        .border-boton {
+            border: 1px solid #fff;
+            width: 30px;
+            height: 60px;
+            border-radius: 15px;
+            overflow: hidden;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 10px 10px 10px #00000067;
+            transition: transform 0.3s ease;
+
+            i {
+                margin: 0 auto;
+                color: #fff;
+                font-size: 25px;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
 }
 
 .sobre-mi-sect {
-    padding-top: 235px;
+    padding-top: 185px;
 
     .titulo-sobre-mi {
         color: #cd5ff8;
@@ -171,7 +206,8 @@ body {
     }
 
     .info {
-        padding-bottom: 300px;
+        padding-bottom: 80px;
+
         .informacion-mia {
             display: flex;
             justify-content: space-around;
@@ -201,16 +237,148 @@ body {
                     }
                 }
 
+                .boton-descargar {
+
+                    button {
+                        font-size: 16px;
+                        color: #fff;
+                        margin-top: 30px;
+                        height: 50px;
+                        width: 150px;
+                        border-radius: 10px;
+                        border: 0.1px solid #fff;
+                        box-shadow: $sombraTXT;
+                        background-color: #cd5ff8;
+                        cursor: pointer;
+                        transition: transform 0.3s ease;
+                        font-weight: bolder;
+
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
             }
 
             img {
-                height: 300px;
-                width: 300px;
+                height: 320px;
+                width: 320px;
                 border-radius: 50%;
                 overflow: hidden;
-                border: 4px solid #fff;
+                border: 6px solid #fff;
             }
         }
 
+        .skills {
+            margin-left: 160px;
+            margin-top: 100px;
+
+            h2 {
+                color: #cd5ff8;
+                text-shadow: $sombraTXT;
+                font-size: 30px;
+            }
+
+            .imagenes-skills {
+                margin-top: 60px;
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                width: 70%;
+
+                .img-container {
+                    position: relative;
+                    overflow: hidden;
+                    padding: 20px;
+
+                    img {
+                        width: 150px;
+                        height: auto;
+                        border-radius: 10px;
+                        object-fit: cover;
+                        transition: transform 0.3s, filter 0.3s;
+                        filter: grayscale(100%);
+                    }
+
+                    h4 {
+                        color: #000;
+                        background-color: #fff;
+                        font-weight: bold;
+                        padding: 10px;
+                        position: absolute;
+                        border-radius: 6px;
+                        top: 5%;
+                        left: 20%;
+                    }
+
+                    &:hover {
+                        img {
+                            transform: scale(1.1);
+                            filter: grayscale(0%);
+                        }
+
+                        h4 {
+                            opacity: 1;
+                        }
+                    }
+
+                    &:not(:hover) {
+                        h4 {
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.proyectos-sect {
+    padding: 160px;
+
+    h2 {
+        color: #cd5ff8;
+        font-size: 38px;
+        text-shadow: $sombraTXT;
+        padding-bottom: 100px;
+    }
+    
+    #carouselExampleControls {
+        width: 65%;
+        margin: auto;
+        
+        .carousel-inner {
+            width: 100%;
+            
+            .carousel-item {
+                text-align: center;
+                position: relative;
+                
+                img {
+                    border-radius: 20px;
+                }
+                h3 {
+                    display: none;
+                    position: absolute;
+                    bottom: -10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    color: #fff;
+                    background-color: #250c4c;
+                    width: 100%;
+                    height: 40px;
+                    border-radius: 10px;
+                    font-weight: bolder;
+                    text-shadow: 2px 2px 2px #00000048;
+                    box-shadow: $sombraTXT;
+                  }
+
+                &:hover {
+                    h3 {
+                        display: block;
+                    }
+                    display: block;
+                }
+            }
+        }
     }
 }
