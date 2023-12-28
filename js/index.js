@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// animacion typed
+
 const typed = new Typed('.typed', {
     strings: [
         '<i>Front-end Developer.</i>',
@@ -61,7 +61,21 @@ const typed = new Typed('.typed', {
     contentType: 'html',
 });
 
-// fondo difimunado para navs
+const puntos = new Typed('.puntos', {
+    strings: [
+        '<i>...</i>'
+    ],
+    typeSpeed: 70,
+    startDelay: 300,
+    backSpeed: 75,
+    shuffle: false,
+    backDelay: 1200,
+    loop: true,
+    loopCount: false,
+    showCursor: '|',
+    contentType: 'html',
+});
+
 document.addEventListener("DOMContentLoaded", function() {
     var nav = document.querySelector('.barra-nav');
     var scrollPos = 0;
@@ -70,11 +84,11 @@ document.addEventListener("DOMContentLoaded", function() {
         var currentScrollPos = window.pageYOffset;
 
         if (currentScrollPos > 5) {
-            // Scroll hacia abajo (y más de 5px desde la parte superior)
-            nav.classList.add('scrolled'); // Agrega la clase 'scrolled'
+
+            nav.classList.add('scrolled'); 
         } else {
-            // Scroll hacia arriba y en la parte superior de la página (menos de 5px)
-            nav.classList.remove('scrolled'); // Quita la clase 'scrolled'
+  
+            nav.classList.remove('scrolled'); 
         }
 
         scrollPos = currentScrollPos;

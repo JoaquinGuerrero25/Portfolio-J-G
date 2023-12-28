@@ -96,6 +96,15 @@ body {
   box-shadow: 0 10px 10px 0 rgba(9, 5, 29, 0.171) !important;
 }
 
+.inicio .en-proceso {
+  padding-top: 100px;
+}
+.inicio .en-proceso h2 {
+  color: #fff;
+  background-color: red;
+  text-align: center;
+  padding: 20px;
+}
 .inicio .titulo-img {
   display: flex;
   justify-content: space-around;

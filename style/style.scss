@@ -102,6 +102,7 @@ body {
     }
 }
 
+
 .barra-nav.scrolled {
     transition: all .3s cubic-bezier(0.74, -0.98, 0.58, 1) 0s !important;
 }
@@ -114,6 +115,16 @@ body {
 }
 
 .inicio {
+
+    .en-proceso {
+        padding-top: 100px;
+        h2 {
+            color: #fff;
+            background-color: red;
+            text-align: center;
+            padding: 20px;
+        }
+    }
 
     .titulo-img {
         display: flex;
